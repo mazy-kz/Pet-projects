@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# R / RStudio
+.Rhistory
+.RData
+.RDataTmp
+.Rproj.user/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Project-specific large raw data (over GitHub 100MB file limit)
+data/fbref_big5_players_2019_2025_all_stat_types.csv
+
