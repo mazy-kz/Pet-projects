@@ -15,7 +15,7 @@ A multi-model scouting system designed to identify statistically similar player 
     2. **Model B:** Value Discovery relative to performance-based expected market value.
     3. **Model C:** High-upside signaling for future market value increases.
 
-> **Note:** For deep technical details, methodology, and execution steps, please refer to the **README.md** inside the `/projects/moneyball-like/` folder.
+> **Note:** For deep technical details, methodology, and execution steps, please refer to the **README.md** inside the `/moneyball-like/` folder.
 
 ---
 
