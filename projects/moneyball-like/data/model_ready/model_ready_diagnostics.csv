@@ -1,5 +1,0 @@
-table,rows,raw_feature_cols,kept_feature_cols,dropped_all_nan,dropped_constant,output_path
-GK,2282,52,52,0,0,model_ready\model_ready_gk_z.csv
-DF,6294,81,81,0,0,model_ready\model_ready_df_z.csv
-MF,8573,94,94,0,0,model_ready\model_ready_mf_z.csv
-FW,2600,88,88,0,0,model_ready\model_ready_fw_z.csv
