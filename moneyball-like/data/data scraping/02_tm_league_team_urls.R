@@ -5,7 +5,7 @@ library(readr)
 library(tibble)
 
 countries_tm <- c("England","Spain","Germany","Italy","France")
-seasons_start <- 2019:2024
+seasons_start <- 2018:2025
 
 all_team_urls <- list()
 
