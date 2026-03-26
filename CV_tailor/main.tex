@@ -1,4 +1,66 @@
-\documentclass[letterpaper]{resume_config}
+\documentclass[11pt,letterpaper]{article}
+
+% Simple one-file resume template.
+% If you edit text manually, escape special characters like: \% \& \_ \#
+
+\pagestyle{empty}
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\textwidth}{7.0in}
+\setlength{\topmargin}{-0.75in}
+\setlength{\textheight}{10.0in}
+
+\newcommand{\ResumeSection}[1]{
+    \vspace{10pt}
+    {\large\textbf{#1}}\\[-2pt]
+    \rule{\textwidth}{0.4pt}
+    \vspace{4pt}
+}
+
+\newcommand{\Header}[6]{
+    \begin{center}
+        {\LARGE \textbf{#1}}\\[6pt]
+        #2 \textbar{} #3 \textbar{} #4\\
+        LinkedIn: #5 \textbar{} GitHub: #6
+    \end{center}
+    \vspace{4pt}
+}
+
+\newcommand{\WorkExperience}[5]{
+    \begin{tabular*}{\textwidth}{@{}l @{\extracolsep{\fill}} r}
+        \textbf{#1} & \textbf{#3} \\
+        #2 & #4 \\
+    \end{tabular*}
+    \begin{list}{$\bullet$}{
+        \setlength{\leftmargin}{1.2em}
+        \setlength{\itemsep}{2pt}
+        \setlength{\topsep}{2pt}
+        \setlength{\parsep}{0pt}
+        \setlength{\partopsep}{0pt}
+    }
+        \small #5
+    \end{list}
+    \vspace{4pt}
+}
+
+\newcommand{\EducationExperience}[4]{
+    \begin{tabular*}{\textwidth}{@{}l @{\extracolsep{\fill}} r}
+        \textbf{#1} & \textbf{#3} \\
+        #2 & #4 \\
+    \end{tabular*}
+    \vspace{2pt}
+}
+
+\newcommand{\Certification}[3]{
+    \textbf{#1} \textbar{} #2 \hfill \textbf{#3}\\[5pt]
+}
+
+\newcommand{\SkillItem}[2]{
+    \textbf{#1}: #2\\[3pt]
+}
 
 \begin{document}
 
@@ -10,117 +72,83 @@
     {brilliant-comrade}
     {mountain-paektu-rider}
 
-\vspace{8pt}   
-Visionary Supreme Leader and Strategic Genius with 12+ years of experience in total societal management, ballistic trajectory optimization, and state-sponsored clapping orchestration. Currently focusing on the "Million-to-One" approval rating framework and developing end-to-end ICBM delivery pipelines to transform regional geopolitics into high-impact diplomatic leverage.
-\vspace{8pt}
+Visionary Supreme Leader and Strategic Genius with 12+ years of experience in total societal management, ballistic trajectory optimization, and state-sponsored clapping orchestration. Currently focusing on the ``Million-to-One'' approval rating framework and developing end-to-end ICBM delivery pipelines to transform regional geopolitics into high-impact diplomatic leverage.
 
-%-------------------------------------------------------------------------------
-%                Work Experience
-%-------------------------------------------------------------------------------
-
-\par
-\section{Work Experience}
-\vspace{5pt}
+\ResumeSection{Work Experience}
 \WorkExperience
-    {Supreme Leader \& Chairman} 
-    {State Affairs Commission of the DPRK} 
-    {Dec 2011 -- Present} 
-    {Pyongyang, DPRK} 
+    {Supreme Leader \& Chairman}
+    {State Affairs Commission of the DPRK}
+    {Dec 2011 -- Present}
+    {Pyongyang, DPRK}
     {
         \item Engineered an end-to-end strategic deterrence pipeline (Hwasong-18) using solid-fuel technology, automating regional tension cycles and reducing diplomatic response time by 90\%.
         \item Developed a ranked loyalty scoring algorithm utilizing multi-factor applause intensity and haircut compliance to prioritize high-value party members across 25M+ records.
-        \item Built a full-stack propaganda platform with state-wide API integrations, ensuring 100\% auditable historical narratives and ensuring zero user churn for 12+ consecutive years.
-    } 
+        \item Built a full-stack propaganda platform with state-wide API integrations, ensuring 100\% auditable historical narratives and zero user churn for 12+ consecutive years.
+    }
 
 \WorkExperience
-    {Chief Basketball Diplomat} 
-    {Rodman-Un Strategic Partnership} 
-    {Feb 2013 -- Aug 2025} 
-    {Pyongyang / NBA Circuit} 
+    {Chief Basketball Diplomat}
+    {Rodman-Un Strategic Partnership}
+    {Feb 2013 -- Aug 2025}
+    {Pyongyang / NBA Circuit}
     {
         \item Designed and executed high-stakes social experiments involving Dennis Rodman, increasing international confusion rates by 45\% and Western media engagement by 60\%.
-        \item Managed a team of 10,000 professional clappers to optimize acoustic resonance during "Field Guidance" sessions at various basketball courts and snack factories.
+        \item Managed a team of 10,000 professional clappers to optimize acoustic resonance during ``Field Guidance'' sessions at various basketball courts and snack factories.
         \item Automated large-scale Emmental cheese procurement workflows, eliminating 20+ hours of manual sourcing and ensuring 100\% dairy integrity for the Supreme Table.
-    } 
+    }
 
 \WorkExperience
-    {Equestrian Propaganda Specialist} 
-    {Mount Paektu Media Group} 
-    {Dec 2019 -- Jun 2023} 
-    {Mount Paektu, DPRK} 
+    {Equestrian Propaganda Specialist}
+    {Mount Paektu Media Group}
+    {Dec 2019 -- Jun 2023}
+    {Mount Paektu, DPRK}
     {
-        \item Engineered a predictive model for cinematic snow-to-horse ratio, justifying the allocation of significant state cameras for "White Horse Gallop" slow-motion sequences.
+        \item Engineered a predictive model for cinematic snow-to-horse ratio, justifying the allocation of significant state cameras for ``White Horse Gallop'' slow-motion sequences.
         \item Implemented an automated data-validation framework for national history books, reducing administrative delays in heritage fabrication by 40\%.
         \item Designed and patented a methodology for looking at things intently (Field Guidance) by analyzing 600+ factory production lines and agricultural plots.
     }
 
 \WorkExperience
-    {General of the Army} 
-    {Korean People's Army} 
-    {Sep 2010 -- Dec 2011} 
-    {Pyongyang} 
+    {General of the Army}
+    {Korean People's Army}
+    {Sep 2010 -- Dec 2011}
+    {Pyongyang}
     {
         \item Automated military parade synchronization using proprietary rhythm-tracking, decreasing march deviation by 99\% across 100K+ soldiers.
-        \item Designed technical specifications for Binocular-Based Observation, saving 24 hours monthly by looking at the South through large lenses.
+        \item Designed technical specifications for binocular-based observation, saving 24 hours monthly by looking at the South through large lenses.
     }
 
-%-------------------------------------------------------------------------------
-%                Education
-%-------------------------------------------------------------------------------
-
-\par
-\section{Education}
-\vspace{5pt}
+\ResumeSection{Education}
 \EducationExperience
-    {Kim Il-sung University} 
-    {PhD in Everything (Self-Awarded)} 
-    {Jan 2011} 
-    {Pyongyang, DPRK} 
+    {Kim Il-sung University}
+    {PhD in Everything (Self-Awarded)}
+    {Jan 2011}
+    {Pyongyang, DPRK}
 \textbf{Core Coursework:} Ballistics, Advanced Clapping, History (The version where we win), Juche Philosophy.
 
 \vspace{3pt}
 
 \EducationExperience
-    {International School of Berne} 
-    {Advanced Diploma in "Being a Normal Student"} 
-    {Jun 2000} 
-    {Berne, Switzerland} 
+    {International School of Berne}
+    {Advanced Diploma in ``Being a Normal Student''}
+    {Jun 2000}
+    {Berne, Switzerland}
 \textbf{Core Coursework:} German, Musical Theater, Sneaking out for Pizza, Basketball Management.
-\vspace{8pt}
 
-%-------------------------------------------------------------------------------
-%                Skills
-%-------------------------------------------------------------------------------
-\par
-\section{Skills}
-\vspace{5pt}
+\ResumeSection{Skills}
 \SkillItem{State Management}{ICBM Testing, 100\% Election Wins, Border Fortification, Juche Ideology, Statue Construction}
 \SkillItem{Visualization \& Clapping}{Field Guidance (Looking at things), Red Button Management, Portrait Standardization, Clap-Volume Optimization}
 \SkillItem{Analytics}{Trajectory Modeling, Purge Analytics, Demographic Compliance Tracking, Anti-K-Pop Detection}
 \SkillItem{Core Competencies}{Riding White Horses, Dennis Rodman Logistics, Emmental Cheese Appraisal, Atomic Physics (Intuitive)}
 
-\vspace{8pt}
-%-------------------------------------------------------------------------------
-%                Certification
-%-------------------------------------------------------------------------------
-
-\par
-\section{Certifications}
-\vspace{5pt}
+\ResumeSection{Certifications}
 \Certification{Brilliant Comrade}{Central Committee}{2011}
 \Certification{Marshal of the DPRK}{People's Army}{2012}
 \Certification{Top Gun (Horse Version)}{Mount Paektu Stables}{2019}
 \Certification{NBA Superfan}{Dennis Rodman}{2013}
 \Certification{100\% Approval Rating}{The Only Voter}{Annually}
 
-\vspace{8pt}
-%-------------------------------------------------------------------------------
-%                Social Impact
-%-------------------------------------------------------------------------------
-
-\par
-\section{Social Impact}
-\vspace{5pt}
+\ResumeSection{Social Impact}
 \Certification{Philanthropist}{Warm Winter - Provided 100\% of the heating via rhetoric}{Every Winter}
 \Certification{Teacher}{Life Lessons - Tutoring the world on how to ignore UN Sanctions}{2011--Present}
 \Certification{Volunteer}{Global Fireworks Display - High-altitude Pacific illumination}{2017}
