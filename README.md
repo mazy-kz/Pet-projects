@@ -1,25 +1,56 @@
-# 🧪 Pet Projects & Experiments
+# ⚽ Moneyball-Like Soccer Recruitment Project
 
-This repository is a collection of my independent research and data-driven side projects.
----
-
-## 📂 Featured Project: Moneyball-Like Soccer Recruitment
-
-A multi-model scouting system designed to identify statistically similar player replacements and high-upside prospects across the top 5 European leagues.
-
-### 🛠️ Project Workflow
-* **Stage 1: Data Parsing (R-based)** — Automated scraping of player-level intelligence via `worldfootballR`.
-* **Stage 2: Data Processing (Python-based)** — Feature engineering, per-90 normalization, and position-specific segmentation.
-* **Stage 3: Modeling Architecture** — A three-model system including:
-    1. **Model A:** Similarity Engine (PCA + KNN) for style-based lookalike identification.
-    2. **Model B:** Value Discovery relative to performance-based expected market value.
-    3. **Model C:** High-upside signaling for future market value increases.
-
-> **Note:** For deep technical details, methodology, and execution steps, please refer to the **README.md** inside the `/moneyball-like/` folder.
+This project builds a multi-model scouting system to identify statistically similar player replacements, undervalued assets, and high-upside prospects across the top 5 European leagues using multi-season player-level data.
 
 ---
 
-## ⚡ Quick Navigation
-1. Navigate to the specific project folder.
-2. Install dependencies: `pip install -r requirements.txt`.
-3. Follow the numbered notebooks to reproduce the analysis.
+## 🚀 Project Overview
+
+The objective is to move beyond raw output numbers and identify players based on **playing style**. By using position-specific modeling, the system ensures fair and actionable comparisons for modern football recruitment.
+
+### Key Goals:
+* **Lookalike Identification:** Find statistical replacements for target players.
+* **Value Discovery:** Identify undervalued players relative to performance-based market value.
+* **Future Signals:** Spot high-upside players likely to increase in value next season.
+
+---
+
+## 🛠️ Project Workflow
+
+### Stage 1: Data Parsing (R-based)
+* **Objective:** Automated collection of raw football intelligence.
+* **Tools:** `worldfootballR` (R package).
+* **Process:** Scraping player-level data from FBref and market valuation data from Transfermarkt.
+* **Why:** Provides the high-fidelity, multi-season foundation required for longitudinal analysis.
+
+### Stage 2: Data Processing & Feature Engineering (Python-based)
+* **Notebook:** `data/Data processing.ipynb`
+* **Objective:** Clean and prepare model-ready datasets.
+* **Methods:** * **Normalization:** Per-90 normalization to remove minutes-played bias.
+    * **Standardization:** Z-score scaling for distance-based algorithms.
+    * **Segmentation:** Position-group splitting to ensure fair comparisons.
+    * **Transformations:** Log transformation of market values and season alignment ($t \rightarrow t+1$ pairs).
+
+### Stage 3: Modeling Architecture (Phase 1)
+* **Notebook:** `modeling/sim engine/Similarity engine.ipynb`
+* **Objective:** Implement Model A — The Similarity Engine.
+* **Techniques:**
+    * **Dimensionality Reduction:** Principal Component Analysis (PCA) to remove noise and handle correlated metrics.
+    * **Clustering:** K-Means to group players into functional archetypes (e.g., "Deep-lying Playmaker").
+    * **Similarity Search:** K-Nearest Neighbors (KNN) and Cosine Similarity to identify lookalikes in style space.
+* **Validation:** Scree plots for PCA and silhouette/elbow plots for optimal clustering.
+
+> **Note:** This is only the **1st model** of the system. Future stages will include Model B (Market Value Prediction) and Model C (High-Upside Signaling).
+
+---
+
+## 📂 Project Structure
+
+```text
+projects/moneyball-like/
+├── data/                    # Stage 1 (R scripts) & Stage 2 (Processing)
+├── modeling/
+│   └── sim engine/          # Stage 3 (Similarity Engine logic)
+├── outputs/                 # CSV exports: Top-K neighbors and archetypes
+├── requirements.txt         # Python dependencies
+└── README.md
